@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="text-center">LIVRES 📗</h1>
+    <form id="livreForm">
+        <input type="text" id="titre" placeholder="Titre" required>
+        <input type="text" id="auteur" placeholder="Auteur" required>
+        <input type="date" id="date" placeholder="date" required>
+        <button type="submit">Valider</button>
+    </form>
+    <div id="livresContainer">
+        <table id="livresTable">
+            <thead>
+                <tr>    
+                    <th>Titre</th>
+                    <th>Auteur</th>
+                    <th>Date de sortie</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="livres"></tbody>
+        </table>
+        <div id="paginationControls" class="pagination-controls">
+            <button id="prevButton" class="pagination-button" onclick="prevPage()">⏪</button>
+            <button id="nextButton" class="pagination-button" onclick="nextPage()">⏩</button>
+        </div>
+    </div>
+     <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h4>Détails</h4>
+            <p id="modalDetails"></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

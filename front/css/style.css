@@ -1,0 +1,229 @@
+/* Global styles */
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form styling */
+#livreForm {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#livreForm input,
+#livreForm button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#livreForm input:focus {
+    border-color: #2ecc71;
+    
+    /* Green */
+    outline: none;
+}
+
+#livreForm button {
+    background-color: #2ecc71;
+    /* Green */
+    font-family: cursive;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+input{
+    font-family: cursive;
+}
+#livreForm button:hover {
+    background-color: #27ae60;
+    font-family: cursive;
+    /* Darker green */
+}
+
+/* Table styling */
+#livresContainer {
+    width: 90%;
+    font-family: cursive;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+#livresTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#livresTable thead {
+    background-color: #2ecc71;
+    /* Green */
+    color: white;
+}
+
+#livresTable th,
+#livresTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#livresTable th {
+    font-weight: bold;
+}
+
+#livresTable td {
+    color: #333;
+}
+
+/* Hover effect on table rows */
+/* #livresTable tr:hover {
+    background-color: #f1f1f1;
+} */
+
+#livresTable button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #2ecc71;
+    /* Green */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#livresTable button:hover {
+    background-color: #27ae60;
+    /* Darker green */
+}
+
+/* Modal styling */
+/* Modal background */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: #fff;
+    padding: 20px 30px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.4s ease-in-out;
+    transform: translateY(-20px);
+}
+button{
+    font-family: cursive;
+}
+/* Modal title */
+.modal-content h4 {
+    margin-top: 0;
+    color: #2ecc71;
+    
+    /* Green */
+}
+
+/* Modal details text */
+#modalDetails {
+    margin-top: 15px;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #2ecc71;
+    /* Green */
+}
+.page-display {
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Pagination styling */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.pagination-controls .pagination-button {
+    background-color: #2ecc71; /* Vert */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-controls .pagination-button:hover {
+    background-color: #27ae60; /* Vert plus foncé */
+}
+
+.pagination-controls .pagination-button:disabled {
+    background-color: #ccc; /* Gris pour les boutons désactivés */
+    cursor: not-allowed;
+}

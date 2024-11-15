@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    image: node:latest
+    container_name: app
+    build:
+      context: ./ 
+    ports:
+      - "80:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/livredb
+    depends_on:
+      - mongo  
+    networks:
+      - livre-network
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - livre-network
+    ports:
+      - "27017:27017" 
+
+volumes:
+  mongo-data:
+    driver: local  
+
+networks:
+  livre-network:
